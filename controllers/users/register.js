@@ -1,11 +1,12 @@
 const { User } = require("../../models");
 
-const { HttpError, sendEmail } = require("../../helpers");
+const { HttpError } = require("../../helpers");
 
 const gravatar = require("gravatar");
 
 const bcrypt = require("bcrypt");
 const { nanoid } = require("nanoid");
+const { sendEmail } = require("../../services/email");
 
 require("dotenv").config();
 

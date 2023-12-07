@@ -15,17 +15,6 @@ const nodemailerConfig = {
 
 const transport = nodemailer.createTransport(nodemailerConfig);
 
-// const email = {
-//   to: "maliv65188@jalunaki.com",
-//   from: "lera.maiorova@ukr.net",
-//   subject: "Test email",
-//   html: "<p>from localhost:3000</p>",
-// };
-// transport
-//   .sendMail(email)
-//   .then(() => console.log("email send success"))
-//   .catch((err) => console.log(err.message));
-
 const sendEmail = async (data) => {
   const email = { ...data, from: "lera.maiorova@ukr.net" };
   await transport.sendMail(email);
